@@ -15,7 +15,7 @@ RUN apt-get update && \
 
 # install python versions
 RUN apt-get update && apt-get install --no-install-recommends -y \
-	python2.3-dev \
+    python2.3-dev \
 	python2.4-dev \
 	python2.5-dev \
 	python2.6-dev \
@@ -28,7 +28,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
 	python3.6-dev \
 	python3.7-dev \
 	python3.8-dev \
-        wget \
+	wget \
     && apt-get purge -y --auto-remove \
     && rm -rf /var/lib/apt/lists/*
 
@@ -36,5 +36,6 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
 RUN wget https://bootstrap.pypa.io/get-pip.py \
     && python3.7 get-pip.py \
     && rm -f get-pip.py \
+    && rm -rf /root/.cache \
     && pip install --no-cache-dir \
         tox==$TOX_VERSION
