@@ -3,7 +3,7 @@
 Docker image to run tox with multiple python versions.
 
 This is an image based on **ubuntu-18.04** with a pre-installed version of **tox**.
-By using the ``TOX_VERSION`` environment variable, it's possible to select the the tool version.
+By using the ``TOX_VERSION`` environment variable, it's possible to select the tool version.
 
 # Python versions
 
