@@ -9,8 +9,14 @@ By using the ``TOX_VERSION`` environment variable, it's possible to select the t
 
 An example command to use ``sawkita/tox`` image is the following:
 
-    # pull docker image
-    docker pull sawkita/tox:latest
+    # pull all python versions
+    docker pull sawkita/tox:all
+    
+    # pull python2 only image
+    docker pull sawkita/tox:2
+    
+    # pull python3 only image
+    docker pull sawkita/tox:3
     
     # run a container
     docker container run \
@@ -18,7 +24,7 @@ An example command to use ``sawkita/tox`` image is the following:
         --interactive \                          # use interactive mode
         --tty \                                  # use pseudo-terminal
         --rm \                                   # remove the container after testing
-        sawkita/tox:latest \
+        sawkita/tox:all \                        # 2 or 3 can be used
         /bin/bash -c "cd /src && tox"            # run tox inside /src
 
 # Python versions
