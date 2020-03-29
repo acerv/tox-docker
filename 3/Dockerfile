@@ -43,7 +43,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
 
 # install tox
 RUN wget https://bootstrap.pypa.io/get-pip.py \
-	&& python3.8 get-pip.py --no-cache-dir; \
+	&& python3.8 get-pip.py --no-cache-dir \
     && rm -f get-pip.py \
     && pip install \
 		--no-cache-dir \
