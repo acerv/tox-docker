@@ -1,9 +1,16 @@
 # Introduction
 
-Docker image to run tox with multiple python versions.
+Docker image to run tox with multiple python versions. Available images
+are the following:
+
+* **sawkita/tox:2** - python2 only
+* **sawkita/tox:3** - python3 only
+* **sawkita/tox:all** - both python 2 and 3
 
 This is an image based on **ubuntu-18.04** with a pre-installed version of **tox**.
 By using the ``TOX_VERSION`` environment variable, it's possible to select the tool version.
+
+Check below for supported python versions.
 
 # Running tox
 
